@@ -4,7 +4,8 @@ import { StyleSheet, Text, View } from 'react-native'
 const index = () => {
   return (
     <View style={styles.content} >
-      <Text style={styles.title} > Pleasant To Do Lists </Text>
+      <Text style={styles.title} > Index </Text>
+      
     </View>
   )
 }
@@ -14,7 +15,7 @@ export default index
 const styles = StyleSheet.create({
   content : {
     flex : 1,
-    backgroundColor : 'cyan',
+    backgroundColor : '#6dd168',
     alignItems : 'center'
   },
 
