@@ -1,15 +1,32 @@
 import React, { useState } from 'react';
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { useDispatch } from 'react-redux';
 import { styles } from '../(tabs)/styles';
 
 const FormADD = () => {
     // Déclaration de la variable d'état textTache
     const [textTache, setTextTache] = useState('');
 
+    // Fonction pour réécrire dans le store
+    const dispatch = useDispatch;
+
     // Fonction pour ajouter une tâche
     const addTodo = () => {
         console.log('Tâche ajoutée');
+
+        // Formattage d'une nouvelle tâche
+        const newTodo = {
+            id: Date.now().toString(),
+            title: textTache,
+            completed: false,
+        };
+
+
     } // Fin de la fonction addTodo
+
+    
+
+
 
     return (
         
