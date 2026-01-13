@@ -4,7 +4,6 @@ import { styles } from '../(tabs)/styles'
 import FormADD from '../components/FormADD'
 import Header from '../components/Header'
 import List from '../components/List'
-import StatTaches from '../components/StatTaches'
 
 const index = () => {
   return (
@@ -16,9 +15,7 @@ const index = () => {
         <List />
       </View>
 
-      <View>
-        <StatTaches />
-      </View>
+      
       
     </View>
   )
