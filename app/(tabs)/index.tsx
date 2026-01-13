@@ -1,14 +1,25 @@
 import React from 'react'
 import { View } from 'react-native'
 import { styles } from '../(tabs)/styles'
+import FormADD from '../components/FormADD'
 import Header from '../components/Header'
-import TemplateTask from '../components/TemplateTask'
+import List from '../components/List'
+import StatTaches from '../components/StatTaches'
 
 const index = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <TemplateTask />
+      <FormADD />
+      
+      <View>
+        <List />
+      </View>
+
+      <View>
+        <StatTaches />
+      </View>
+      
     </View>
   )
 }
