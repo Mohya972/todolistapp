@@ -9,7 +9,7 @@ import {
     View,
 } from 'react-native';
 
-export default function TodoList() {
+export default function TemplateTask() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState('');
 

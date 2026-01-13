@@ -1,27 +1,17 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { View } from 'react-native'
+import { styles } from '../(tabs)/styles'
+import Header from '../components/Header'
+import TemplateTask from '../components/TemplateTask'
 
 const index = () => {
   return (
-    <View style={styles.content} >
-      <Text style={styles.title} > Index </Text>
-      
+    <View style={styles.container}>
+      <Header />
+      <TemplateTask />
     </View>
   )
 }
 
 export default index
 
-const styles = StyleSheet.create({
-  content : {
-    flex : 1,
-    backgroundColor : '#6dd168',
-    alignItems : 'center'
-  },
-
-  title : {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  }
-})
