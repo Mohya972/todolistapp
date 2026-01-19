@@ -102,11 +102,15 @@ export const styles = StyleSheet.create({
         fontWeight: '500',
     },
     swipeable: {
-    height: 50,
-    backgroundColor: 'papayawhip',
-    alignItems: 'center',
+        height: 50,
+        backgroundColor: 'papayawhip',
+        alignItems: 'center',
     },
     rightAction: {
-        backgroundColor: 'red',
+        width: 100,
+        backgroundColor: 'orange',
+        flexDirection: 'row',
+        alignContent: 'center',
+        justifyContent: 'center'
     }
 });
