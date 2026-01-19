@@ -1,5 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { Provider } from 'react-redux'
 import { styles } from '../(tabs)/styles'
 import FormADD from '../components/FormADD'
@@ -9,15 +10,18 @@ import { store } from '../store/store'
 
 const index = () => {
   return (
-    <Provider store={store}>
-      <View style={styles.container}>
-        <Header />
-        <FormADD />
-        <List />
-            
-      </View>
-    </Provider>
-    
+    <GestureHandlerRootView>
+      <Provider store={store}>
+        <View style={styles.container}>
+
+          {/* <ExempleSwipe /> */}
+          <Header />
+          <FormADD />
+          <List />
+
+        </View>
+      </Provider>
+    </GestureHandlerRootView>
   )
 }
 
