@@ -11,9 +11,17 @@ const Products = () => {
 
   // chargement des données de l'API
   const loadData = async () => {
-    // appel à l'API
-    const query = axios.get("https://fakestoreapi.com/products");
-    console.log("query :", query);
+    // Changement de l'état du chargement
+    setLoading(true);
+
+    // requête sur l'API
+    const query = await axios.get("https://fakestoreapi.com/products");
+
+    // chargement des données dans la flatlist
+    setDataProducts(query.data);
+
+    // fin de chargement
+    setLoading(false);
   };
 
   useEffect(() => {
