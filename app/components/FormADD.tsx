@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { styles } from '../(tabs)/styles';
+import { ajouter } from '../store/slices/taskSlice';
 
 const FormADD = () => {
     // Déclaration de la variable d'état textTache
     const [textTache, setTextTache] = useState('');
 
     // Fonction pour réécrire dans le store
-    const dispatch = useDispatch;
+    const dispatch = useDispatch();
 
     // Fonction pour ajouter une tâche
     const addTodo = () => {
@@ -21,6 +22,9 @@ const FormADD = () => {
             completed: false,
         };
 
+        dispatch(ajouter(newTodo));
+        console.log('newTodo :', newTodo);
+        // A TERMINER !!!
 
     } // Fin de la fonction addTodo
 
