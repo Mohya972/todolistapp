@@ -52,6 +52,8 @@ export const styles = StyleSheet.create({
     },
     checkbox: {
         marginRight: 15,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     checkboxInner: {
         width: 24,
@@ -99,4 +101,12 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: '500',
     },
+    swipeable: {
+    height: 50,
+    backgroundColor: 'papayawhip',
+    alignItems: 'center',
+    },
+    rightAction: {
+        backgroundColor: 'red',
+    }
 });
