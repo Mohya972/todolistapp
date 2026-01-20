@@ -20,8 +20,10 @@ const Products = () => {
     // chargement des données dans la flatlist
     setDataProducts(query.data);
 
-    // fin de chargement
-    setLoading(false);
+    // Timer pour retarder le temps de chargement
+    setTimeout(() => {
+      setLoading(false); // fin de chargement
+    }, 1500);
   };
 
   useEffect(() => {
@@ -37,8 +39,9 @@ const Products = () => {
       ) : (
         <FlatList
           data={dataProducts}
+          numColumns={2}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => <CardProduct />}
+          renderItem={({ item }) => <CardProduct product={item} />}
         />
       )}
     </View>
