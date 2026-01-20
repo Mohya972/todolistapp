@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { stylesEcommerce } from "./stylesEcommerce";
 
 const CardProduct = ({ product }) => {
@@ -8,15 +8,22 @@ const CardProduct = ({ product }) => {
       ? product.title.slice(0, 20) + "..."
       : (product?.title ?? "");
 
+  const goToProduct = () => {
+    console.log("goToProduct");
+  };
+
   return (
-    <View style={stylesEcommerce.containerCard}>
+    <TouchableOpacity
+      onPress={goToProduct}
+      style={stylesEcommerce.containerCard}
+    >
       <Image source={{ uri: product?.image }} style={stylesEcommerce.imgCard} />
 
       <View style={stylesEcommerce.mainCard}>
         <Text>{shortTitle}</Text>
-        <Text> {product.price}€ </Text>
+        <Text> {product.price} € </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

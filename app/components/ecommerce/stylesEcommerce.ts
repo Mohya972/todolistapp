@@ -28,5 +28,6 @@ export const stylesEcommerce = StyleSheet.create({
 
   mainCard: {
     padding: 10,
+    flexDirection: "column",
   },
 });
