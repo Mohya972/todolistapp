@@ -20,7 +20,7 @@ const Products = () => {
     // chargement des données dans la flatlist
     setDataProducts(query.data);
 
-    // Timer pour retarder le temps de chargement
+    // Timer pour fixer le temps de chargement
     setTimeout(() => {
       setLoading(false); // fin de chargement
     }, 1500);
